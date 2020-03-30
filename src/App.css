@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+html {
+  height: 100%;
+  width : 100%; 
+  background: #D5E1ED;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center; 
+  height: 100%;
+  margin: 5rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+* {
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  font-weight: 300;  
+  letter-spacing: .05rem;
+  color: #A2ABDE;
+}
+ 
+h1 { 
+  margin: 1rem 0;
+}
+/* Input */
+.box {
+  padding: .25rem; 
+  border-radius: 1rem;
+  box-shadow: 
+    4px 2px 16px rgba(135, 165, 190, 0.5), 
+    -4px -2px 16px #FFFFFF;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box input {
+  padding: 1.5rem 0;
+  border: none;
+  border-radius: .75rem;
+  outline: none;
+  background: none;
+  transition: all .2s ease-in-out; 
+  width : 100%;
 }
+
+.box input:focus {
+  box-shadow: 
+    inset 4px 2px 8px rgba(135, 165, 190, 0.5), 
+    inset -4px -2px 8px #FFFFFF;
+}
+
+/* Button */
+button {
+  margin-left: 1.5rem;
+  padding: 1.77rem; /* 1.5rem + .25rem */
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  background: linear-gradient(145deg, #CEDBED, #FAFCFD);
+  box-shadow: 
+    4px 2px 16px rgba(135, 165, 190, 0.5), 
+    -4px -2px 16px #FFFFFF;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 
+    1px 1px 4px rgba(135, 165, 190, 0.5), 
+    -1px -1px 4px #FFFFFF;
+}
+
+button:active {
+  box-shadow: 
+    inset 2px 1px 4px rgba(135, 165, 190, 0.5), 
+    inset -2px -1px 4px #FFFFFF;
+}
+
