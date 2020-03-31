@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Inserisci una parola da aggiungere...</h1> 
+      <h1>Inserisci una parola da aggiungere... </h1> 
       <div className="box">
         <input 
           type="text" 
