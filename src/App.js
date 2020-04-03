@@ -9,8 +9,8 @@ function App() {
   const [inputValue, setInputValue] = useState("")
   const [counter, setCounter] = useState(0) 
   const [elementsArray, setElementsArray] = useState([])
-
-  const inputList = elements.map((e) => <li key={e.id}>{e.value}</li> );
+  
+  const inputList =  elements.map((e) =>   <li key={e.id}>{e.value}</li> );
   const serverList = elementsArray.map((e) => <li key={e.id}>{e.value}</li> );
   
   const send = () =>  { 
@@ -30,7 +30,7 @@ function App() {
   
   const EmptyDatabase = () =>  { 
     emptyDatabase()
-    setElements("")
+    setElements([])
     setInputValue("")
   }
 
@@ -58,18 +58,19 @@ function App() {
 
      const copyPassedArray = data => { 
        for(let i = 0 ; i< data.length; i++) { 
-         elementsArray[i] = data[i]
+        elementsArray[i] = data[i]
        }
        console.log(elementsArray)
      }
      
-  const emptyDatabase = () => { 
-    const requestOptions = {
-        method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify()
-    };
-    fetch('http://localhost:5000/array/deleteTitle', requestOptions)   
+    const emptyDatabase = () => { 
+      const requestOptions = {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify()
+      };
+      fetch('http://localhost:5000/array/deleteTitle', requestOptions)   
+      
      } 
 
   return (
