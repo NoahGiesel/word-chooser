@@ -18,10 +18,13 @@ body {
   font-weight: 300;  
   letter-spacing: .05rem;
   color: #A2ABDE;
+  list-style-type: none;
 }
  
-h1 { 
+.title { 
   margin: 1rem 0; 
+  font-size: 1.5rem;
+  color: #4e4e4ee5;
 }
 /* Input */
 .box {
@@ -30,7 +33,8 @@ h1 {
   box-shadow: 
     4px 2px 16px rgba(135, 165, 190, 0.5), 
     -4px -2px 16px #FFFFFF;
-  cursor: pointer;
+    cursor: pointer;
+    margin: 3rem 0;
 }
 
 .box input {
@@ -45,13 +49,18 @@ h1 {
 
 .box input:focus {
   box-shadow: 
-    inset 4px 2px 8px rgba(135, 165, 190, 0.5), 
-    inset -4px -2px 8px #FFFFFF;
+  inset 4px 2px 8px rgba(135, 165, 190, 0.5), 
+  inset -4px -2px 8px #FFFFFF; 
 }
 
 /* Button */
+.buttonEmpty { 
+  display: block;  
+  margin: 0 auto;
+}
+
 button {
-  margin-left: 1.5rem;
+  margin: 0 auto;
   padding: 1.77rem; /* 1.5rem + .25rem */
   border: none;
   border-radius: 1rem;
@@ -61,6 +70,7 @@ button {
     4px 2px 16px rgba(135, 165, 190, 0.5), 
     -4px -2px 16px #FFFFFF;
   cursor: pointer;
+  display: block;
 }
 
 button:hover {
@@ -75,3 +85,48 @@ button:active {
     inset -2px -1px 4px #FFFFFF;
 }
 
+.button-grid { 
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-gap: .5rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+
+/* grid container */
+
+.container-grid { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-gap: .5rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.input-given {
+  border: 1px solid #6e6e6e98;
+}
+
+.out-puts{
+  border: 1px solid #6e6e6e98;
+}
+
+.server-status{
+  border: 1px solid #6e6e6e98;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  body {
+    padding: 20px 30px;
+  }
+  .container-grid { 
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-columns: none;
+    grid-gap: .5rem;
+    text-align: center;
+  }
+}
